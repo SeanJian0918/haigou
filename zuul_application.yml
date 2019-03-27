@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active:
+    -dve
+---
+server:
+  port: 9527
+spring:
+  application:
+    name: HAIGOU-ZUUL-GATEWAY
+  profiles: dve
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: gateway-9527 #显示的名字而已
+    prefer-ip-address: true
+zuul:
+  routes:
+    haiGou.serviceId: plat-service
+    haiGou.path: /sean/**  #路由映射：/sean/**这个路径的访问都路由到serverId服务处理
+  ignored-services: "*"  # 安全加固：忽略这个服务，如果要忽略所有的服务， “*”
+  prefix: "/haigou"  # 统一前缀
+---
+server:
+  port: 9528
+spring:
+  application:
+    name: HAIGOU-ZUUL-GATEWAY-TEST
+  profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: gateway-9528 #显示的名字而已
+    prefer-ip-address: true
+zuul:
+  routes:
+    haiGou.serviceId: plat-service
+    haiGou.path: /sean/**  #路由映射：/sean/**这个路径的访问都路由到serverId服务处理
+  ignored-services: "*"  # 安全加固：忽略这个服务，如果要忽略所有的服务， “*”
+  prefix: "/haigou"  # 统一前缀

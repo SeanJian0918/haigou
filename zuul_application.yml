@@ -38,7 +38,7 @@ eureka:
     prefer-ip-address: true
 zuul:
   routes:
-    haiGou.serviceId: plat-service
+    haiGou.serviceId: plat-service-test
     haiGou.path: /sean/**  #路由映射：/sean/**这个路径的访问都路由到serverId服务处理
   ignored-services: "*"  # 安全加固：忽略这个服务，如果要忽略所有的服务， “*”
   prefix: "/haigou"  # 统一前缀

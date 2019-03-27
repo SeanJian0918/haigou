@@ -1,20 +1,19 @@
 spring:
   profiles:
-    active:
-    -dve
+    active: dve
 ---
 server:
   port: 9527
 spring:
   application:
-    name: HAIGOU-ZUUL-GATEWAY
+    name: MICROSERVICE-ZUUL-GATEWAY
   profiles: dve
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: gateway-9527 #显示的名字而已
+    instance-id: gateway-9527.com #显示的名字而已
     prefer-ip-address: true
 zuul:
   routes:
@@ -27,14 +26,14 @@ server:
   port: 9528
 spring:
   application:
-    name: HAIGOU-ZUUL-GATEWAY-TEST
+    name: MICROSERVICE-ZUUL-GATEWAY-TEST
   profiles: test
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: gateway-9528 #显示的名字而已
+    instance-id: gateway-9528.com #显示的名字而已
     prefer-ip-address: true
 zuul:
   routes:

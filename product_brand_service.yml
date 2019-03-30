@@ -19,8 +19,8 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
 mybatis-plus:
-  mapper-locations: cn/seanjian/mybatisplus/mapper/*Mapper.xml
-  type-aliases-package: cn.seanjian.mybatisplus.domain #设置別名
+  mapper-locations: cn/seanjian/haigou/mapper/*Mapper.xml
+  type-aliases-package: cn.seanjian.haigou.domain #设置別名
 ---
 server:
   port: 8004

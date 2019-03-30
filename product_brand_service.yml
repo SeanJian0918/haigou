@@ -9,7 +9,7 @@ spring:
     name: PRODUCT-BRAND-SERVICE
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/aigou
+      url: jdbc:mysql://localhost:3306/haigou
       username: root
       password: root
   profiles: dve
@@ -28,7 +28,7 @@ spring:
     name: PRODUCT-BRAND-SERVICE-TEST
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/aigou
+      url: jdbc:mysql://localhost:3306/haigou
       username: root
       password: root
   profiles: test

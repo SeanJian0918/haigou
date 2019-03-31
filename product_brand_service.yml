@@ -19,7 +19,7 @@ eureka:
       defaultZone: http://localhost:7001/eureka/
 mybatis-plus:
   mapper-locations: classpath:cn/seanjian/haigou/mapper/*Mapper.xml
-type-aliases-package: cn.seanjian.haigou.domain
+type-aliases-package: cn.seanjian.haigou.domain,cn.seanjian.haigou.query
 ---
 server:
   port: 8004
@@ -38,4 +38,4 @@ eureka:
       defaultZone: http://localhost:7001/eureka/
 mybatis-plus:
   mapper-locations: classpath:cn/seanjian/haigou/mapper/*Mapper.xml
-type-aliases-package: cn.seanjian.haigou.domain
+type-aliases-package: cn.seanjian.haigou.domain,cn.seanjian.haigou.query

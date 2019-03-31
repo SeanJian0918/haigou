@@ -18,8 +18,8 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 mybatis-plus:
-  mapper-locations: classpath:cn/seanjian/haigou/mapper/*Mapper.xml
-type-aliases-package: cn.seanjian.haigou.domain,cn.seanjian.haigou.query
+  mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml
+  type-aliases-package: cn.seanjian.haigou.domain,cn.itsource.aigou.query
 ---
 server:
   port: 8004
@@ -28,7 +28,7 @@ spring:
     name: PRODUCT-BRAND-SERVICE-TEST
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/haigou
+      url: jdbc:mysql://localhost:3306/haigou_test
       username: root
       password: root
   profiles: test
@@ -38,4 +38,3 @@ eureka:
       defaultZone: http://localhost:7001/eureka/
 mybatis-plus:
   mapper-locations: classpath:cn/seanjian/haigou/mapper/*Mapper.xml
-type-aliases-package: cn.seanjian.haigou.domain,cn.seanjian.haigou.query

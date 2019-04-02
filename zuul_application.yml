@@ -13,18 +13,18 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: gateway-9527.com #显示的名字而已
+    instance-id: gateway-9527.com
     prefer-ip-address: true
 zuul:
   routes:
     plat.serviceId: plat-service
-    plat.path: /plat/**  #路由映射：/sean/**这个路径的访问都路由到serverId服务处理
+    plat.path: /plat/**
     product.serviceId: product-brand-service
     product.path: /product/**
     common.serviceId: common-privoder
     common.path: /common/**
-  ignored-services: "*"  # 安全加固：忽略这个服务，如果要忽略所有的服务， “*”
-  prefix: "/haigou"  # 统一前缀
+  ignored-services: "*"
+  prefix: "/haigou"
 ---
 server:
   port: 9528
@@ -37,15 +37,15 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: gateway-9528.com #显示的名字而已
+    instance-id: gateway-9528.com 
     prefer-ip-address: true
 zuul:
   routes:
     plat.serviceId: plat-service-test
-    plat.path: /plat/**  #路由映射：/sean/**这个路径的访问都路由到serverId服务处理
+    plat.path: /plat/**
     product.serviceId: product-brand-service-test
     product.path: /product/**
     common.serviceId: common-privoder
     common.path: /common/**
-  ignored-services: "*"  # 安全加固： 忽略这个服务，如果要忽略所有的服务， “*”
-  prefix: "/haigou"  # 统一前缀
+  ignored-services: "*"
+  prefix: "/haigou"

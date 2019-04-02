@@ -22,7 +22,7 @@ mybatis-plus:
   type-aliases-package: cn.seanjian.haigou.domain,cn.seanjian.haigou.query
 feign:
    hystrix:
-       enabled: true
+       enabled: false
 ---
 server:
   port: 8004
@@ -44,4 +44,4 @@ mybatis-plus:
   type-aliases-package: cn.seanjian.haigou.domain,cn.seanjian.haigou.query
 feign:
    hystrix:
-       enabled: true
+       enabled: false
